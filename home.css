@@ -1,0 +1,102 @@
+*{
+  padding:0;
+  margin:0;
+  text-decoration:none;
+  list-style:none;
+  box-sizing:border-box; 
+ }
+body{
+     font-family:monospace;
+    }
+nav{
+    background:rgb(4,104,71);
+    height:50px;
+    width:100%;
+   }
+lable.logo{
+           color:ivory;
+           font-size:40px;
+           line-height:50px;
+           padding:0 100px;
+           font-weight:bold;
+          }
+nav ul{
+       float:right;
+       margin-right:20px;
+      }
+nav ul li{
+          display:inline-block;
+          line-height:50px;
+          margin:0 8px;
+         }
+nav ul li a{
+            color:ivory;
+            font-size:20px;
+            font-family:Helvetica;
+            padding:10px;
+            border-radius:5px;
+           }
+a.active,a:hover{
+                 background:#808080;
+                 transition:.5s;
+                }
+.checkbtn{
+          font-size:20px;
+          color:ivory;
+          float:right;
+          line-height:55px;
+          margin-right:40px;
+          cursor:pointer;
+          display:block;
+        }
+#check{ 
+       display:none; 
+      }
+@media (max-width:952px)
+{
+ lable.logo{
+            font-size:30px;
+            padding-left:50px;
+           }
+ nav ul li a{
+             font-size:16px;
+            } 
+}
+@media (max-width:858px)
+{
+ .logo{
+       font-size: 20px;
+       display:inline-block;
+       margin-right:10px;
+       padding: auto;
+      }
+ .checkbtn{
+           display:block;
+           padding:auto;
+          }
+  ul{
+     position:fixed;
+     width:100%;
+     height:100vh;
+     background-image:linear-gradient(to bottom right,lightgreen,mediumaquamarine,lightgreen);
+     top:80px;
+     left:-100%;
+     text-align:center;
+     transition: all .5s;
+    }
+  nav ul li{
+            display:block;
+            margin:50px 0;
+            line-height:30px;
+           }
+  nav ul li a{
+              font-size:20px;
+             }
+  a:hover,a.active{
+                   background:lightcoral;
+                   color:black;
+                  }
+  #check:checked ~ ul{
+                      left:0;
+                     }
+}
